@@ -1,0 +1,35 @@
+.hide {
+  display: none
+}
+
+.node circle {
+  fill: #999;
+}
+
+text {
+  font: 10px sans-serif;    
+}
+
+.node--internal circle {
+  fill: #555;
+}
+
+
+
+path.link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: 0.4;
+  stroke-width: 1.5px;
+}
+
+rect {
+    shape-rendering: crispEdges;
+}
+
+rect.survived {
+  fill:green;
+}
+rect.died {
+  fill:red;
+}

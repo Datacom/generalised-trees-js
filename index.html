@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.4.0/bootstrap-slider.min.js"></script>
+    
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel="stylesheet" type="text/css"/>
+      <link href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.4.0/css/bootstrap-slider.min.css' rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='css/style.css' rel="stylesheet" type="text/css"/>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-hierarchy.v1.min.js"></script>
+<!--
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+    <script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+    <script src="https://d3js.org/d3-quadtree.v1.min.js"></script>
+    <script src="https://d3js.org/d3-timer.v1.min.js"></script>
+    <script src="https://d3js.org/d3-force.v1.min.js"></script>
+-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <legend>General Tree</legend>
+        <div id='sidebar' class="row">
+          <div  class='col-sm-3'>
+            <div class="form-group">
+<!--              <label for="sel1">Select list:</label>-->
+              <select class="form-control" id="setChoice">
+                <!--  Options go here                -->
+              <option class='fake disabled'>-- Choose a dataset --</option>
+              </select>
+            </div>
+          </div>
+         
+          <div class="col-sm-3">
+            <button id = 'makeatree' type="button" class="btn btn-default" style = "width: 100%">Draw the tree</button>
+          </div>
+          <div id = 'prunediv' class="col-sm-6">
+              Prune the Tree: &nbsp; Fewer branches  &nbsp; <input id="prune" data-slider-id='pruneSlider' type="text" data-slider-min="0.3" data-slider-max="1" data-slider-step="0.001" data-slider-value="0.7"/> &nbsp; More branches
+          </div>  
+        </div>
+        <div class="row">
+           <div class="col-sm-3">
+            <p id = 'package'></p>
+          </div>
+          <div class="col-sm-2">
+            <p id ='rows'></p>
+          </div>
+          <div class="col-sm-7">
+            <p id ='title'></p>
+          </div>
+        </div>
+        <div class="row">
+          <div id = 'tree' class='col-sm-12'>
+            
+            <div id = 'treediv' class="col-sm-12">
+            </div>
+            <div id = 'featureTable' class="col-sm-12 table-responsive hide">
+              <table id='selectcolumns' class="table">
+                <thead>
+                  <tr>
+                    <th>Column</th>
+                    <th>Type</th>
+                    <th>Sample</th>
+                    <th>Choose Data use</th>
+                  </tr>
+                </thead>
+                <tbody>
+            <!--
+                  <tr>
+
+                  </tr>
+            -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/charts.js" charset="utf-8"></script>
+   
+</html>
